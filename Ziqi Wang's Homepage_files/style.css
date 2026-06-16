@@ -22,9 +22,7 @@ html {
 body {
   margin: 0;
   color: var(--text);
-  background:
-    linear-gradient(180deg, rgba(22, 132, 184, 0.09), rgba(246, 248, 251, 0) 320px),
-    var(--bg);
+  background: var(--bg);
   font: 16px/1.5 "Crimson Pro", serif;
 }
 
@@ -228,6 +226,7 @@ email {
 
 .content {
   min-width: 0;
+  font-size: 1.08rem;
 }
 
 .content-section {
@@ -273,11 +272,11 @@ email {
 }
 
 .home-page .section-heading {
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .home-page .content-section > h2 {
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .home-page .content-section > .text-block,
@@ -285,6 +284,26 @@ email {
 .home-page .content-section > .publications,
 .home-page .content-section > ul {
   margin-top: 0;
+}
+
+.home-page .text-block,
+.home-page .news-list,
+.home-page .content-section ul,
+.home-page .publications .author,
+.home-page .publications .periodical {
+  font-size: inherit;
+}
+
+.home-page .publications .title {
+  font-size: 1.12rem;
+}
+
+.home-page h2 {
+  font-size: 1.96rem;
+}
+
+.home-page h3 {
+  font-size: 1.12rem;
 }
 
 .home-page .section-link {
@@ -416,7 +435,7 @@ email {
 h2 {
   margin: 0 0 18px;
   color: var(--heading);
-  font-size: 1.78rem;
+  font-size: 1.96rem;
   line-height: 1.2;
   font-family: "Crimson Pro", serif;
   font-weight: 600;
@@ -425,7 +444,7 @@ h2 {
 h3 {
   margin: 22px 0 6px;
   color: var(--heading);
-  font-size: 1.05rem;
+  font-size: 1.12rem;
   font-family: "Crimson Pro", serif;
 }
 
@@ -469,6 +488,18 @@ h3 {
 .text-block {
   text-align: justify;
   text-justify: inter-word;
+}
+
+.text-block,
+.news-list,
+.content-section ul,
+.publications .author,
+.publications .periodical {
+  font-size: 1.08rem;
+}
+
+.publications .title {
+  font-size: 1.12rem;
 }
 
 .news-list,
@@ -580,39 +611,33 @@ h3 {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #171b24;
-    --panel: #202632;
-    --panel-soft: #263545;
-    --text: #dce1e8;
-    --muted: #a7b0bf;
-    --heading: #5ec1ee;
-    --accent: #42addd;
-    --accent-strong: #5ec1ee;
-    --line: #333d4b;
+    --bg: #1b2029;
+    --panel: #232a35;
+    --panel-soft: #2b3441;
+    --text: #e2e7ee;
+    --muted: #adb7c5;
+    --heading: #72c7f2;
+    --accent: #4bb6e3;
+    --accent-strong: #72c7f2;
+    --line: #384454;
     --shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
   }
 
   body {
-    background:
-      linear-gradient(180deg, rgba(66, 173, 221, 0.12), rgba(23, 27, 36, 0) 320px),
-      var(--bg);
+    background: var(--bg);
   }
 
   .topbar {
-    background: #101b2c;
-  }
-
-  .profile-card,
-  .content-section {
-    background: rgba(32, 38, 50, 0.94);
+    background: #12253b;
   }
 
   strong {
-    color: #f2f5f8;
+    color: #f4f7fa;
   }
 
   .social-icons a {
-    background: #1b2230;
+    background: rgba(255, 255, 255, 0.02);
+    border-color: rgba(114, 199, 242, 0.2);
   }
 }
 
