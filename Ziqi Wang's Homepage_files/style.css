@@ -671,7 +671,7 @@ h3 {
 
 @media screen and (max-width: 560px) {
   body {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .topbar-inner {
@@ -704,12 +704,12 @@ h3 {
   }
 
   .content-section {
-    padding: 24px 20px;
+    padding: 20px 16px;
   }
 
   .section-heading {
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
   }
 
   .pub-row {
@@ -725,5 +725,75 @@ h3 {
     width: 100%;
     height: auto;
     aspect-ratio: 2 / 1;
+  }
+
+  .page-shell {
+    gap: 18px;
+    padding: 24px 16px 42px;
+  }
+
+  .image.avatar {
+    width: 132px;
+    height: 132px;
+    margin-bottom: 14px;
+  }
+
+  .profile-card h1 {
+    font-size: 1.4rem;
+  }
+
+  .home-page .profile-card .position,
+  .home-page .profile-card .profile-meta,
+  .home-page .profile-card .profile-meta a,
+  .home-page .profile-card email,
+  .sub-page .profile-card .position,
+  .sub-page .profile-card .profile-meta,
+  .sub-page .profile-card .profile-meta a,
+  .sub-page .profile-card email {
+    font-size: 0.92rem;
+  }
+
+  .content {
+    font-size: 1rem;
+  }
+
+  h2,
+  .home-page h2 {
+    font-size: 1.72rem;
+    margin-bottom: 14px;
+  }
+
+  h3,
+  .home-page h3 {
+    font-size: 1.02rem;
+  }
+
+  .text-block,
+  .news-list,
+  .content-section ul,
+  .publications .author,
+  .publications .periodical,
+  .home-page .text-block,
+  .home-page .news-list,
+  .home-page .content-section ul,
+  .home-page .publications .author,
+  .home-page .publications .periodical {
+    font-size: 1rem;
+  }
+
+  .publications .title,
+  .home-page .publications .title {
+    font-size: 1.04rem;
+  }
+
+  .social-icons {
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .social-icons a {
+    width: 34px;
+    height: 34px;
+    font-size: 0.98rem;
   }
 }
