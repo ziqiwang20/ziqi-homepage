@@ -718,13 +718,28 @@ h3 {
 
   .pub-row .abbr {
     width: 100%;
+    height: auto;
+    min-height: 0;
     margin-bottom: 12px;
+    overflow: hidden;
+  }
+
+  .publications ol.bibliography li .abbr {
+    height: auto;
+    min-height: 0;
   }
 
   .publications ol.bibliography li .teaser {
     width: 100%;
     height: auto;
     aspect-ratio: 2 / 1;
+    display: block;
+  }
+
+  .pub-row .col-sm-9 {
+    display: block;
+    clear: both;
+    padding-top: 0;
   }
 
   .page-shell {
