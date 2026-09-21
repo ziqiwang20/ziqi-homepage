@@ -15,6 +15,7 @@
   --panel-glass: rgba(255, 255, 255, 0.88);
   --panel-glass-strong: rgba(255, 255, 255, 0.94);
   --icon-surface: #f9fbfd;
+  --avatar-shadow: 0 12px 30px rgba(26, 58, 88, 0.13);
 }
 
 :root[data-theme="dark"] {
@@ -34,6 +35,7 @@
   --panel-glass: rgba(31, 42, 55, 0.9);
   --panel-glass-strong: rgba(31, 42, 55, 0.95);
   --icon-surface: rgba(255, 255, 255, 0.025);
+  --avatar-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
   --global-theme-color: rgb(80, 181, 225);
 }
 
@@ -243,8 +245,9 @@ p {
   margin-bottom: 18px;
   overflow: hidden;
   border-radius: 50%;
-  border: 0;
-  box-shadow: none;
+  border: 3px solid var(--panel);
+  box-shadow: 0 0 0 1px var(--line), var(--avatar-shadow);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .image.avatar img {
@@ -254,15 +257,16 @@ p {
 }
 
 .profile-card h1 {
-  margin: 0 0 8px;
+  margin: 0 0 5px;
   color: var(--heading);
   font-size: 1.65rem;
   line-height: 1.2;
   font-family: "Crimson Pro", serif;
+  font-weight: 400;
 }
 
 .position {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   color: var(--accent-strong);
   font-family: "Crimson Pro", serif;
   font-weight: 700;
@@ -277,6 +281,10 @@ p {
 email {
   font-family: "Ubuntu Mono", "SFMono-Regular", Consolas, monospace;
   font-size: 0.92rem;
+}
+
+.profile-card a[href^="mailto:"] {
+  color: var(--muted) !important;
 }
 
 .social-icons {
@@ -442,8 +450,9 @@ email {
 }
 
 .sub-page .profile-card .position {
-  margin-top: 16px;
+  margin-top: 7px;
   margin-bottom: 4px;
+  color: var(--muted) !important;
 }
 
 .sub-page .profile-card .profile-meta:last-of-type {
@@ -476,8 +485,14 @@ email {
 }
 
 .home-page .profile-card .position {
-  margin-top: 16px;
+  margin-top: 7px;
   margin-bottom: 4px;
+  color: var(--muted) !important;
+}
+
+.home-page .profile-card a[href^="mailto:"],
+.sub-page .profile-card a[href^="mailto:"] {
+  color: var(--muted) !important;
 }
 
 .home-page .profile-card .profile-meta:last-of-type {
@@ -519,7 +534,7 @@ h2 {
   font-size: 1.96rem;
   line-height: 1.2;
   font-family: "Crimson Pro", serif;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 h3 {
@@ -527,6 +542,7 @@ h3 {
   color: var(--heading);
   font-size: 1.12rem;
   font-family: "Crimson Pro", serif;
+  font-weight: 400;
 }
 
 .home-page #services h3:first-of-type,
@@ -756,23 +772,33 @@ h3 {
   .nav-links {
     align-self: auto;
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-    gap: 4px;
-    justify-content: center;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2px;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
   }
 
   .nav-links a {
-    width: 100%;
+    flex: 0 0 auto;
+    width: auto;
     justify-content: center;
-    padding: 0 4px;
+    padding: 0 7px;
     min-height: 30px;
     border-radius: 5px;
     font-size: 0.74rem;
   }
 
   .theme-toggle {
-    width: 100%;
+    flex: 0 0 32px;
+    width: 32px;
     min-height: 30px;
     justify-content: center;
     padding: 0;
@@ -885,16 +911,5 @@ h3 {
     width: 34px;
     height: 34px;
     font-size: 0.98rem;
-  }
-}
-
-@media screen and (max-width: 420px) {
-  .nav-links {
-    gap: 2px;
-  }
-
-  .nav-links a {
-    padding: 0 1px;
-    font-size: 0.66rem;
   }
 }
