@@ -7,12 +7,14 @@
   <meta name="description" content="Ziqi Wang is a Ph.D. Candidate at the School of Computing Technologies, RMIT University.">
   <meta name="keywords" content="Ziqi Wang, Eddie Wang, Wang Ziqi, Ziqi Eddie Wang">
   <title>Ziqi Wang's Homepage</title>
+  <script>(function(){var t;try{t=localStorage.getItem('ziqi-color-theme');}catch(e){}if(t!=='light'&&t!=='dark'){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.dataset.theme=t;document.documentElement.style.colorScheme=t;}());</script>
   <link rel="shortcut icon" type="image/png" href="./Ziqi Wang's Homepage_files/RMIT_coa.png">
   <link rel="stylesheet" href="./Ziqi Wang's Homepage_files/academicons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="./Ziqi Wang's Homepage_files/font.css">
   <link rel="stylesheet" href="./Ziqi Wang's Homepage_files/publications.css">
   <link rel="stylesheet" href="./Ziqi Wang's Homepage_files/style.css">
+  <script defer src="./Ziqi Wang's Homepage_files/theme-switcher.js"></script>
 </head>
 <body class="home-page">
   <nav class="topbar" aria-label="Primary navigation">
@@ -27,6 +29,9 @@
         <a href="./publications.html">Publications</a>
         <a href="./teaching.html">Teaching</a>
         <a href="./services.html">Services</a>
+        <button class="theme-toggle" type="button" aria-label="Switch to night mode" aria-pressed="false">
+          <span class="theme-sun" aria-hidden="true">☀</span><span class="theme-moon" aria-hidden="true">☾</span>
+        </button>
       </div>
     </div>
   </nav>
